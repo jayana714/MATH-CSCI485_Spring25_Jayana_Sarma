@@ -8,23 +8,23 @@ This project applies RFE using a linear regression model to the diabetes dataset
 
 ## **Requirements**
 To run this project, install the necessary dependencies:
-sci-kit-learn
-NumPy
-pandas
-matplotlib
-seaborn
+- sci-kit-learn
+- NumPy
+- pandas
+- matplotlib
+- seaborn
 ## **Features of the Diabetes Dataset**
 The dataset includes the following features:
 
-Pregnancies: Number of times pregnant
-Glucose: Plasma glucose concentration (mg/dL)
-BloodPressure: Diastolic blood pressure (mm Hg)
-SkinThickness: Triceps skinfold thickness (mm)
-Insulin: Serum insulin (mu U/ml)
-BMI: Body mass index (weight in kg/height in m²)
-DiabetesPedigreeFunction: Diabetes pedigree function (a function of the family history of diabetes)
-Age: Age (years)
-Outcome: Class variable (0 or 1, where 1 indicates diabetes)
+- Pregnancies: Number of times pregnant
+- Glucose: Plasma glucose concentration (mg/dL)
+- BloodPressure: Diastolic blood pressure (mm Hg)
+- SkinThickness: Triceps skinfold thickness (mm)
+- Insulin: Serum insulin (mu U/ml)
+- BMI: Body mass index (weight in kg/height in m²)
+- DiabetesPedigreeFunction: Diabetes pedigree function (a function of the family history of diabetes)
+- Age: Age (years)
+- Outcome: Class variable (0 or 1, where 1 indicates diabetes)
 
 ## **Results**
 After applying Recursive Feature Elimination (RFE), the following features were selected as the most important predictors of diabetes progression:
