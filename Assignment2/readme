@@ -1,43 +1,52 @@
-# Wine Quality Dimensionality Reduction
+# **PCA and t-SNE for Dimensionality Reduction on Wine Quality Dataset**
 
-This project demonstrates the application of **Principal Component Analysis (PCA)** and **t-SNE** on the Wine Quality dataset to reduce its dimensionality for easier visualization and analysis.
+## **Introduction to PCA and t-SNE**
+Dimensionality reduction techniques, such as **Principal Component Analysis (PCA)** and **t-Distributed Stochastic Neighbor Embedding (t-SNE)**, are essential for visualizing high-dimensional data in lower dimensions. These techniques help to simplify complex data while preserving its underlying structure. PCA is a linear technique that focuses on maximizing variance, whereas t-SNE is a non-linear technique that preserves local structures.
 
-## Usage
+## **Overview**
+This project applies **Principal Component Analysis (PCA)** and **t-SNE** to the **Wine Quality dataset** to reduce its dimensionality and visualize the data in 2D. The goal is to compare how these techniques handle the high-dimensional dataset in terms of clustering and interpretability.
 
-1. Download the datasets.
-2. Ensure the following CSV files are present:
-   - `winequality-red.csv` (Red Wine dataset)
-   - `winequality-white.csv` (White Wine dataset)
+## **Requirements**
+To run this project, you will need to install the following dependencies:
+- `scikit-learn` (for PCA, t-SNE, and dataset handling)
+- `matplotlib` (for visualizations)
+- `pandas` (for data manipulation)
 
-## Dataset
+## **Wine Quality Dataset**
+The dataset consists of chemical properties of wine samples and their quality ratings, as follows:
+- **Fixed Acidity**: Citric acid (g/dm³)
+- **Volatile Acidity**: Acetic acid (g/dm³)
+- **Citric Acid**: Citric acid (g/dm³)
+- **Residual Sugar**: Residual sugar (g/dm³)
+- **Chlorides**: Chlorides (g/dm³)
+- **Free Sulfur Dioxide**: Free sulfur dioxide (mg/dm³)
+- **Total Sulfur Dioxide**: Total sulfur dioxide (mg/dm³)
+- **Density**: Density (g/cm³)
+- **pH**: pH level
+- **Sulphates**: Sulphates (g/dm³)
+- **Alcohol**: Alcohol percentage (%)
+- **Quality**: Quality rating (scale from 0 to 10)
 
-The dataset includes chemical properties of red and white wines, such as:
-- Acidity
-- Alcohol content
-- Quality (target variable)
+## **Project Steps**
 
-## Dimensionality Reduction Techniques
+1. **Data Preprocessing**:
+   - Load and merge the red and white wine datasets.
+   - Normalize the dataset, excluding the target variable 'quality'.
+   - Handle any missing data if necessary.
 
-### PCA (Principal Component Analysis)
+2. **Applying PCA**:
+   - Perform PCA to reduce the dataset to 2D while retaining the maximum variance.
+   - Visualize the results with scatter plots, using colors to differentiate wine types (red or white).
+   - Compare the results of PCA with t-SNE to assess the interpretability and clustering performance.
 
-- PCA is a **linear** technique that reduces dimensionality by projecting the data onto the axes (principal components) that capture the maximum variance.
-- PCA is computationally fast, easy to interpret, and works well for datasets with linear relationships between features.
-- It provides a global understanding of the data by maximizing variance but may not capture complex, non-linear relationships.
+3. **Applying t-SNE**:
+   - Apply t-SNE for non-linear dimensionality reduction to project the data into 2D.
+   - Visualize the results and compare them with PCA-based visualizations.
+   
+4. **Comparison and Analysis**:
+   - Compare the cluster separation and interpretability of PCA and t-SNE.
+   - Discuss the advantages and limitations of each method in terms of preserving the structure of the data.
 
-### t-SNE (t-Distributed Stochastic Neighbor Embedding)
 
-- t-SNE is a **non-linear** technique that focuses on preserving the **local structure** of the data.
-- It is commonly used for visualizing high-dimensional datasets, particularly for uncovering clusters.
-- t-SNE can provide better separation between clusters compared to PCA but may distort the global relationships (distances between clusters).
-- It is computationally expensive and requires careful tuning of hyperparameters like perplexity and learning rate.
 
-## Comparison of PCA and t-SNE
-
-- **PCA** is faster, easier to interpret, and focuses on capturing global variance, making it suitable for datasets with linear relationships.
-- **t-SNE** is better for visualizing complex datasets with a lot of non-linear relationships and is more effective at identifying clusters.
-- While PCA provides a good understanding of the data's overall structure, t-SNE is useful for exploring local patterns and cluster formation.
-
-## Conclusion
-
-This project compares the strengths and limitations of PCA and t-SNE for dimensionality reduction. While PCA is useful for linear data and provides a global view of the dataset, t-SNE is better suited for uncovering complex structures and clusters in high-dimensional data.
 
